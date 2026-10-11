@@ -27,3 +27,10 @@ jobs:
 
       - name: Chạy kiểm thử với Gradle
         run: ./gradlew test
+
+      - name: Đăng nhập vào GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
