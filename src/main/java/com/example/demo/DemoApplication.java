@@ -13,6 +13,7 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
+    // Trigger push lần 2 để kiểm tra Gradle Dependency Caching trên GitHub Actions CI
     @GetMapping("/")
     public String hello() {
         return "Hello IT209 Session 11 - CI Dependency Caching!";
